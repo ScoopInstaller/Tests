@@ -46,6 +46,6 @@ jobs:
       - name: Init and Test
         shell: pwsh
         run: |
-          $env:SCOOP_HOME="$(Resolve-Path './scoop_core')"
+          $env:SCOOP_HOME="$(Resolve-Path '.\scoop_core')"
           .\scoop_core\test\bin\init.ps1
           .\my_bucket\bin\test.ps1

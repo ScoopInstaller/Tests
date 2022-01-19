@@ -1,6 +1,6 @@
 # Scoop Bucket for Testing and Development
 
-[![Excavator](https://github.com/ScoopInstaller/Tests/actions/workflows/excavator.yml/badge.svg)](https://github.com/ScoopInstaller/Tests/actions/workflows/excavator.yml)
+[![Tests](https://github.com/ScoopInstaller/Tests/actions/workflows/ci.yml/badge.svg)](https://github.com/ScoopInstaller/Tests/actions/workflows/ci.yml) [![Excavator](https://github.com/ScoopInstaller/Tests/actions/workflows/excavator.yml/badge.svg)](https://github.com/ScoopInstaller/Tests/actions/workflows/excavator.yml)
 
 Testing purpose bucket that contains manifests using WIP features of [Scoop](https://scoop.sh), the Windows command-line installer.
 

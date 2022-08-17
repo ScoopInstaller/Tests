@@ -1,0 +1,14 @@
+{
+    "homepage": "http://gnuwin32.sourceforge.net/packages/which.htm",
+    "version": "2.20",
+    "license": "GPL-2.0",
+    "url": "https://sourceforge.net/projects/gnuwin32/files/which/2.20/which-2.20-bin.zip",
+    "hash": "sha1:385990045d755bb910d2c30b9697faf36d61e37e",
+    "bin": "bin\\which.exe",
+    "checkver": {
+        "sourceforge": "gnuwin32/which"
+    },
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/gnuwin32/files/which/$version/which-$version-bin.zip"
+    }
+}

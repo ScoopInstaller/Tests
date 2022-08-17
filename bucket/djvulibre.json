@@ -4,7 +4,7 @@
     "homepage": "http://djvu.sourceforge.net",
     "license": "GPL-3.0-or-later",
     "url": "https://downloads.sourceforge.net/project/djvu/DjVuLibre_Windows/3.5.28+4.12/DjVuLibre-3.5.28_DjView-4.12_Setup.exe#/dl.7z",
-    "hash": "16c0a63926d0380280f35c8d9570efe01032c03c262ba61aa72a341b8cb58469",
+    "hash": "sha1:acd91e73505f1d00835454ab6314a981cd849541",
     "bin": [
         "bzz.exe",
         "c44.exe",
@@ -32,8 +32,8 @@
     ],
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst.exe\" -Recurse -Force",
     "checkver": {
-        "url": "https://sourceforge.net/projects/djvu/rss?path=/DjVuLibre_Windows",
-        "regex": "/(?<lib>[\\d.]+)(?:\\+(?<viewer>[\\d.]+))?/DjVuLibre",
+        "sourceforge": "djvu/DjVuLibre_Windows",
+        "regex": "(?<lib>[\\d.]+)(?:\\+(?<viewer>[\\d.]+))?/DjVuLibre",
         "replace": "${1}-${2}"
     },
     "autoupdate": {

@@ -34,8 +34,8 @@
         "bin\\windres.exe"
     ],
     "checkver": {
-        "url": "https://sourceforge.net/projects/ezwinports/files",
-        "regex": "/files/binutils-([\\d.]+)-w32-bin.zip"
+        "sourceforge": "ezwinports",
+        "regex": "binutils-([\\d.]+)-w32-bin.zip"
     },
     "autoupdate": {
         "url": [

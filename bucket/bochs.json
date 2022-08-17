@@ -17,10 +17,7 @@
         "niclist.exe",
         "sb16ctrl.exe"
     ],
-    "checkver": {
-        "url": "http://bochs.sourceforge.net/getcurrent.html",
-        "regex": "<b>Latest release:<\\/b> Bochs ([\\d.]+)"
-    },
+    "checkver": "sourceforge",
     "autoupdate": {
         "architecture": {
             "64bit": {

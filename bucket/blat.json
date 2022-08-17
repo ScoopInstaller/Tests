@@ -19,8 +19,8 @@
     "extract_dir": "blat3224",
     "bin": "full\\blat.exe",
     "checkver": {
-        "url": "https://sourceforge.net/projects/blat/rss?path=/Blat%20Full%20Version",
-        "regex": "blat(\\d)(\\d)(\\d+)_32\\.full\\.zip",
+        "sourceforge": "blat/Blat Full Version",
+        "regex": "blat(\\d)(\\d)(\\d+)_64\\.full\\.zip",
         "replace": "${1}.${2}.${3}"
     },
     "autoupdate": {

@@ -50,8 +50,8 @@
         ]
     },
     "checkver": {
-        "url": "https://geti2p.net/en/download",
-        "regex": "i2pinstall_([\\d.]+)_windows"
+        "url": "https://launchpad.net/api/devel/i2p/trunk?ws.op=get_timeline",
+        "jsonpath": "$.landmarks[0].name"
     },
     "autoupdate": {
         "url": "https://launchpad.net/i2p/trunk/$version/%2Bdownload/i2pinstall_$version_windows.exe#/dl.7z",

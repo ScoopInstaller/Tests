@@ -34,7 +34,7 @@
         "bin\\win32\\inadyn_ip.cache",
         "bin\\win32\\inadyn_time.cache"
     ],
-    "checkver": "title=\"/inadyn-mt/inadyn-mt\\.v\\.([\\d.]+)",
+    "checkver": "sourceforge",
     "autoupdate": {
         "url": "https://downloads.sourceforge.net/project/inadyn-mt/inadyn-mt/inadyn-mt.v.$version/inadyn-mt.v.$version.tar.gz",
         "extract_dir": "inadyn-mt.v.$version"

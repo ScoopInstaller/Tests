@@ -1,5 +1,5 @@
 {
-    "version": "0.9.50",
+    "version": "1.9.0",
     "description": "An anonymizing network.",
     "homepage": "https://geti2p.net",
     "license": {
@@ -9,8 +9,8 @@
     "suggest": {
         "JDK": "java/openjdk"
     },
-    "url": "https://launchpad.net/i2p/trunk/0.9.50/%2Bdownload/i2pinstall_0.9.50_windows.exe#/dl.7z",
-    "hash": "92e38abf0650671e08460dd25711afa67f7933a0b6fa655cbd2746662f06fb30",
+    "url": "https://launchpad.net/i2p/trunk/1.9.0/%2Bdownload/i2pinstall_1.9.0_windows.exe#/dl.7z",
+    "hash": "fdb2e471fadfda33589697536180df966ec165ab59a0d9c8a623491cc2c8eae3",
     "bin": [
         "I2P.exe",
         "I2Psvc.exe"
@@ -50,14 +50,14 @@
         ]
     },
     "checkver": {
-        "url": "https://launchpad.net/i2p/trunk",
-        "regex": "Latest version is ([\\d.]+)"
+        "url": "https://geti2p.net/en/download",
+        "regex": "i2pinstall_([\\d.]+)_windows"
     },
     "autoupdate": {
         "url": "https://launchpad.net/i2p/trunk/$version/%2Bdownload/i2pinstall_$version_windows.exe#/dl.7z",
         "hash": {
             "url": "https://geti2p.net/download",
-            "regex": "(?sm)$basename.*?$sha256"
+            "regex": "(?s)$basename.*?$sha256"
         }
     }
 }

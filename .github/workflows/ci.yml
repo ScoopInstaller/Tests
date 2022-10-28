@@ -2,7 +2,6 @@ name: Tests
 
 on:
   pull_request:
-  push:
   workflow_dispatch:
 
 jobs:
@@ -21,11 +20,15 @@ jobs:
           repository: ScoopInstaller/Scoop
           ref: develop
           path: 'scoop_core'
-      - name: Init and Test
+      - name: Init Test Suite
+        uses: potatoqualitee/psmodulecache@v5.1
+        with:
+          modules-to-cache: BuildHelpers
+          shell: powershell
+      - name: Test Bucket
         shell: powershell
         run: |
           $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
-          .\scoop_core\test\bin\init.ps1
           .\my_bucket\bin\test.ps1
   test_pwsh:
     name: PowerShell
@@ -42,9 +45,13 @@ jobs:
           repository: ScoopInstaller/Scoop
           ref: develop
           path: 'scoop_core'
-      - name: Init and Test
+      - name: Init Test Suite
+        uses: potatoqualitee/psmodulecache@v5.1
+        with:
+          modules-to-cache: BuildHelpers
+          shell: pwsh
+      - name: Test Bucket
         shell: pwsh
         run: |
           $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
-          .\scoop_core\test\bin\init.ps1
           .\my_bucket\bin\test.ps1

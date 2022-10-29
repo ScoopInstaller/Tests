@@ -1,6 +1,5 @@
 on:
   pull_request:
-    types: [opened]
 name: Pull Requests
 jobs:
   pullRequestHandler:
@@ -9,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - name: PullRequestHandler
-        uses: ScoopInstaller/GithubActions@main
+        uses: ScoopInstaller/GithubActions@fix-pr-handle
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SCOOP_BRANCH: "develop"

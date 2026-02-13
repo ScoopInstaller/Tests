@@ -1,0 +1,54 @@
+{
+    "version": "24.0.0",
+    "description": "A fast, lightweight and extensible text editor for Windows. Useful for opening very large files.",
+    "homepage": "https://www.emeditor.com/",
+    "license": "Shareware",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.emeditor.info/emed64_24.0.0_portable.zip",
+            "hash": "2f08f9f856c8ec33e1adb712b0435939cd20e8fdb6a85ccb29e5f9dc8daf5afe"
+        },
+        "32bit": {
+            "url": "https://download.emeditor.info/emed32_24.0.0_portable.zip",
+            "hash": "e64d7a593393a7c3ba0ec38311cb94056f525fe47dbaf37009ea969ae9d8fd07"
+        }
+    },
+    "pre_install": [
+        "$manifest.persist | ForEach-Object {",
+        "    if ([io.path]::GetExtension($_)) {",
+        "        if (!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" | Out-Null }",
+        "    }",
+        "}"
+    ],
+    "bin": "EmEditor.exe",
+    "shortcuts": [
+        [
+            "EmEditor.exe",
+            "EmEditor"
+        ]
+    ],
+    "persist": [
+        "eeCommon.ini",
+        "eeConfig.ini",
+        "eeLM.ini",
+        "eePlugins.ini"
+    ],
+    "checkver": {
+        "script": [
+            "$dl_url = 'https://support.emeditor.com/en/downloads/latest/portable/64'",
+            "$header = Invoke-WebRequest -Method Head -Uri $dl_url",
+            "$header.BaseResponse.RequestMessage.RequestUri.OriginalString"
+        ],
+        "regex": "emed64_([\\d.]+)_portable.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.emeditor.info/emed64_$version_portable.zip"
+            },
+            "32bit": {
+                "url": "https://download.emeditor.info/emed32_$version_portable.zip"
+            }
+        }
+    }
+}

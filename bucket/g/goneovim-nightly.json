@@ -26,7 +26,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repositories/107124394/releases/tags/nightly",
+        "github": "https://api.github.com/repos/akiyosi/goneovim/releases/tags/nightly",
         "jsonpath": "$.assets[?(@.name =~ /goneovim-windows-(x86_64|arm64).zip/)].updated_at",
         "regex": ".*(?<year>\\d{4})\\D(?<month>\\d{2})\\D(?<day>\\d{2}).*",
         "replace": "${year}${month}${day}"

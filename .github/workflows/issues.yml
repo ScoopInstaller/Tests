@@ -5,8 +5,10 @@ on:
     types: [opened, labeled]
 
 permissions:
-  # Auto hash fixing commits
+  # Auto hash fixing via direct commit
   contents: write
+  # Auto hash fixing via pull request
+  pull-requests: write
   issues: write
 
 jobs:

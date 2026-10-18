@@ -1,0 +1,14 @@
+{
+    "version": "2.0",
+    "url": "https://example.com/fullpath/2.0/app.zip",
+    "env_set": {
+        "APP_HOME": "$dir"
+    },
+    "pre_install": [
+        "Set-Content \"$env:TEMP\\note.txt\" 'hi'",
+        "$dir = fullpath_x '.'"
+    ],
+    "checkver": {
+        "jsonpath": "$.versions[0]"
+    }
+}

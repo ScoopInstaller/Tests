@@ -1,0 +1,16 @@
+{
+    "version": "1.0",
+    "url": "https://example.com/env/download/old-app.exe",
+    "pre_install": [
+        "env 'OLD_APP_HOME' \"$dir\"",
+        "Add-Content (fullpath 'config') 'settings'"
+    ],
+    "post_install": "fullpath 'data' | Out-Null",
+    "architecture": {
+        "64bit": {
+            "installer": {
+                "script": "add_first_in_path $dir\\bin"
+            }
+        }
+    }
+}

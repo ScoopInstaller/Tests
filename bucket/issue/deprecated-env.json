@@ -1,0 +1,11 @@
+{
+    "version": "1.0",
+    "description": "Fixture app calling the deprecated env function from pre_install",
+    "homepage": "https://example.com/deprecated-env",
+    "license": "Freeware",
+    "url": "https://example.com/deprecated-env/1.0/deprecated-env.zip",
+    "hash": "e1f2ac5bf04bcd91ddc4e5360958d886104d6a3379b70a8e19fd4404ab49c85b",
+    "pre_install": [
+        "env 'ENV_APP_HOME' \"$dir\""
+    ]
+}

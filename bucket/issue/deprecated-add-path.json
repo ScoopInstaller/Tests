@@ -1,0 +1,15 @@
+{
+    "version": "1.0",
+    "description": "Fixture app calling the deprecated add_first_in_path function from an architecture installer",
+    "homepage": "https://example.com/deprecated-add-path",
+    "license": "Freeware",
+    "url": "https://example.com/deprecated-add-path/1.0/deprecated-add-path.zip",
+    "hash": "dcae2d24094954a3a51acde7523f4f4cf748961f8f79023c29571bfebb98c09e",
+    "architecture": {
+        "64bit": {
+            "installer": {
+                "script": "add_first_in_path $dir\\bin"
+            }
+        }
+    }
+}

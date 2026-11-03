@@ -1,0 +1,9 @@
+{
+    "version": "1.0",
+    "description": "Fixture app calling the deprecated fullpath function from post_install",
+    "homepage": "https://example.com/deprecated-fullpath",
+    "license": "Freeware",
+    "url": "https://example.com/deprecated-fullpath/1.0/deprecated-fullpath.zip",
+    "hash": "b93735f73d948228d46e7ba620aef76d819afa43c96303850ea3b5da6465fc3a",
+    "post_install": "fullpath 'config' | Out-Null"
+}
